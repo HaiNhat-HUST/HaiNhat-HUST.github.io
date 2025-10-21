@@ -3,7 +3,14 @@
 date = '2025-10-20'
 draft = false
 title = 'CSCV2025 | Web | ZC-1'
+
+categories = ["writeup"]
+tags = ["web"]
+posttypes = ["CTF"]
+host = ["CSCV"]
+
 +++
+
 
 # ⚔️ ZC-1
 

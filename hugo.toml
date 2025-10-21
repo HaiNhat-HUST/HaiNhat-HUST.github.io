@@ -1,7 +1,9 @@
 baseURL = "https://HaiNhat-HUST.github.io/"
 languageCode = "vi-vn"
-title = "Blog Của Tôi"
+title = "Blog"
 theme = "PaperMod"
+timeZone = "Asia/Ho_Chi_Minh"
+
 
 # Cấu hình Theme PaperMod
 [params]
@@ -19,17 +21,34 @@ theme = "PaperMod"
     disableInlineCSS = false
     disableHomeIcon = false
     
-    homeInfoParams.Title = "HaiNhat"
-    homeInfoParams.Content = "Đây là blog cá nhân của tôi, nơi tôi chia sẻ về ...!"
+[params.homeInfoParams]
+    Title = "HaiNhat-HUST"
+    Content = "Tập hack"
 
-# Cấu hình Menu
 [menu]
-    [[menu.main]]
-        identifier = "archives"
-        name = "Lưu trữ"
-        url = "/archives/"
-        weight = 10
 
-# Cấu hình ngôn ngữ cho theme
+    [[menu.main]]
+        identifier = "ctf"
+        name = "CTF Writeups"
+        url = "/ctf/"
+        weight = 2
+
+    [[menu.main]]
+        identifier = "hackthebox"
+        name = "Hackthebox"
+        url = "/hackthebox/"
+        weight = 3
+    
+    [[menu.main]]
+        identifier = "research"
+        name = "Research/Sharing"
+        url = "/research/"
+        weight = 4
+
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 5
 [outputs]
     home = [ "HTML", "RSS", "JSON" ]

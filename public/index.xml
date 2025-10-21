@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Blog Của Tôi</title>
+    <title>Blog</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Blog Của Tôi</description>
+    <description>Recent content on Blog</description>
     <generator>Hugo -- 0.151.2</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Tue, 21 Oct 2025 09:59:34 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 20 Oct 2025 00:00:00 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CSCV2025 | Web | ZC-1</title>
-      <link>http://localhost:1313/posts/cscv2025_zc-1/</link>
-      <pubDate>Tue, 21 Oct 2025 09:59:34 +0700</pubDate>
-      <guid>http://localhost:1313/posts/cscv2025_zc-1/</guid>
+      <link>http://localhost:1313/ctf/cscv_2025/zc-1/</link>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/ctf/cscv_2025/zc-1/</guid>
       <description>&lt;h1 id=&#34;-zc-1&#34;&gt;⚔️ ZC-1&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Category:&lt;/strong&gt; Web&lt;/li&gt;
@@ -32,6 +32,40 @@
 &lt;h2 id=&#34;chi-tiết&#34;&gt;Chi tiết&lt;/h2&gt;
 &lt;h3 id=&#34;app1&#34;&gt;App1&lt;/h3&gt;
 &lt;p&gt;Ứng dụng bao gồm các endpoint sau (bỏ qua một số chi tiết không quan trọng):&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tên&lt;/strong&gt;: Le Hai Nhat&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chức danh&lt;/strong&gt;: Student / Pentester / (Redteamer)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vị trí&lt;/strong&gt;: Việt Nam&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;tóm-tắt-ngắn&#34;&gt;Tóm tắt ngắn&lt;/h2&gt;
+&lt;p&gt;Mình là Nhat&lt;/p&gt;
+&lt;h2 id=&#34;kỹ-năng&#34;&gt;Kỹ năng&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ngôn ngữ lập trình:&lt;/strong&gt; Python, C, JavaScript (React, Node.js), Kotlin (Android).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web &amp;amp; DevOps:&lt;/strong&gt; HTML, CSS, Hugo, Docker, Nginx.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bảo mật / CTF:&lt;/strong&gt; Web (SSTI, XXE, SQLi, HTTP Smuggling)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Công cụ:&lt;/strong&gt; Burp Suite, Nmap, ffuf, Metasploit, Wireshark.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kinh-nghiệm--học-tập&#34;&gt;Kinh nghiệm &amp;amp; Học tập&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Đang học/quan tâm: Web security, pentesting lab.&lt;/li&gt;
+&lt;li&gt;Tham gia CTF, viết writeup cho các challenge về Web và Pwn.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dự-án-tiêu-biểu&#34;&gt;Dự án tiêu biểu&lt;/h2&gt;
+&lt;h2 id=&#34;liên-hệ&#34;&gt;Liên hệ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a href=&#34;mailto:hainhat5423@gmail.com&#34;&gt;hainhat5423@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: github.com/HaiNhat-HUST&lt;/li&gt;
+&lt;li&gt;Twitter/X: _&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

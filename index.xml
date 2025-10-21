@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Blog Của Tôi</title><link>https://HaiNhat-HUST.github.io/</link><description>Recent content on Blog Của Tôi</description><generator>Hugo -- 0.151.2</generator><language>vi-vn</language><lastBuildDate>Mon, 20 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://HaiNhat-HUST.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>CSCV2025 | Web | ZC-1</title><link>https://HaiNhat-HUST.github.io/posts/cscv2025_zc-1/</link><pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate><guid>https://HaiNhat-HUST.github.io/posts/cscv2025_zc-1/</guid><description>&lt;h1 id="-zc-1"&gt;⚔️ ZC-1&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Blog</title><link>https://HaiNhat-HUST.github.io/</link><description>Recent content on Blog</description><generator>Hugo -- 0.151.2</generator><language>vi-vn</language><lastBuildDate>Mon, 20 Oct 2025 00:00:00 +0700</lastBuildDate><atom:link href="https://HaiNhat-HUST.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>CSCV2025 | Web | ZC-1</title><link>https://HaiNhat-HUST.github.io/ctf/cscv_2025/zc-1/</link><pubDate>Mon, 20 Oct 2025 00:00:00 +0700</pubDate><guid>https://HaiNhat-HUST.github.io/ctf/cscv_2025/zc-1/</guid><description>&lt;h1 id="-zc-1"&gt;⚔️ ZC-1&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Category:&lt;/strong&gt; Web&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Difficulty:&lt;/strong&gt; _&lt;/li&gt;
@@ -16,5 +16,31 @@
 &lt;/ul&gt;
 &lt;h2 id="chi-tiết"&gt;Chi tiết&lt;/h2&gt;
 &lt;h3 id="app1"&gt;App1&lt;/h3&gt;
-&lt;p&gt;Ứng dụng bao gồm các endpoint sau (bỏ qua một số chi tiết không quan trọng):&lt;/p&gt;</description></item><item><title>Svattt</title><link>https://HaiNhat-HUST.github.io/posts/svattt/</link><pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate><guid>https://HaiNhat-HUST.github.io/posts/svattt/</guid><description>&lt;p&gt;hello world&lt;/p&gt;
-&lt;p&gt;haahh&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Ứng dụng bao gồm các endpoint sau (bỏ qua một số chi tiết không quan trọng):&lt;/p&gt;</description></item><item><title>About</title><link>https://HaiNhat-HUST.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://HaiNhat-HUST.github.io/about/</guid><description>&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tên&lt;/strong&gt;: Le Hai Nhat&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chức danh&lt;/strong&gt;: Student / Pentester / (Redteamer)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vị trí&lt;/strong&gt;: Việt Nam&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="tóm-tắt-ngắn"&gt;Tóm tắt ngắn&lt;/h2&gt;
+&lt;p&gt;Mình là Nhat&lt;/p&gt;
+&lt;h2 id="kỹ-năng"&gt;Kỹ năng&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ngôn ngữ lập trình:&lt;/strong&gt; Python, C, JavaScript (React, Node.js), Kotlin (Android).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web &amp;amp; DevOps:&lt;/strong&gt; HTML, CSS, Hugo, Docker, Nginx.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bảo mật / CTF:&lt;/strong&gt; Web (SSTI, XXE, SQLi, HTTP Smuggling)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Công cụ:&lt;/strong&gt; Burp Suite, Nmap, ffuf, Metasploit, Wireshark.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="kinh-nghiệm--học-tập"&gt;Kinh nghiệm &amp;amp; Học tập&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Đang học/quan tâm: Web security, pentesting lab.&lt;/li&gt;
+&lt;li&gt;Tham gia CTF, viết writeup cho các challenge về Web và Pwn.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="dự-án-tiêu-biểu"&gt;Dự án tiêu biểu&lt;/h2&gt;
+&lt;h2 id="liên-hệ"&gt;Liên hệ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a href="mailto:hainhat5423@gmail.com"&gt;hainhat5423@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: github.com/HaiNhat-HUST&lt;/li&gt;
+&lt;li&gt;Twitter/X: _&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

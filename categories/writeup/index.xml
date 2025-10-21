@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Writeup on Blog</title><link>https://HaiNhat-HUST.github.io/categories/writeup/</link><description>Recent content in Writeup on Blog</description><generator>Hugo -- 0.151.2</generator><language>vi-vn</language><lastBuildDate>Mon, 20 Oct 2025 00:00:00 +0700</lastBuildDate><atom:link href="https://HaiNhat-HUST.github.io/categories/writeup/index.xml" rel="self" type="application/rss+xml"/><item><title>CSCV2025 | Web | ZC-1</title><link>https://HaiNhat-HUST.github.io/ctf/cscv_2025/zc-1/</link><pubDate>Mon, 20 Oct 2025 00:00:00 +0700</pubDate><guid>https://HaiNhat-HUST.github.io/ctf/cscv_2025/zc-1/</guid><description>&lt;h1 id="-zc-1"&gt;⚔️ ZC-1&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Category:&lt;/strong&gt; Web&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Difficulty:&lt;/strong&gt; _&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Author:&lt;/strong&gt; _&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Description&lt;/strong&gt;: _&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Resource&lt;/strong&gt;: _&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="image" loading="lazy" src="https://hackmd.io/_uploads/S1omJ7XAex.png"&gt;&lt;/p&gt;
+&lt;h1 id="recon"&gt;🛰️Recon&lt;/h1&gt;
+&lt;h2 id="tổng-quan-chung"&gt;Tổng quan chung:&lt;/h2&gt;
+&lt;p&gt;Challenge bao gồm 2 ứng dụng web với:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;app1 là ứng dụng web Python cho phép đăng kí, đăng nhập, và upload file zip, ứng dụng được expose với port 8080&lt;/li&gt;
+&lt;li&gt;app2 là ứng dụng web Php phục vụ cho việc giải nén là lưu trữ các file vừa upload, ứng dụng không thể truy cập từ bên ngoài mà chỉ có thể thông qua app1 hoặc từ bên trong&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="chi-tiết"&gt;Chi tiết&lt;/h2&gt;
+&lt;h3 id="app1"&gt;App1&lt;/h3&gt;
+&lt;p&gt;Ứng dụng bao gồm các endpoint sau (bỏ qua một số chi tiết không quan trọng):&lt;/p&gt;</description></item></channel></rss>

@@ -1,22 +1,32 @@
 
++++
+date = '2025-10-21T09:59:34+07:00'
+draft = false
+title = 'CSCV2025 | Web | ZC-1'
++++
 
 # ⚔️ ZC-1
-**Category:** Web
-**Difficulty:** _
-**Author:** _
-**Description**: _
-**Resource**: _
+
+- **Category:** Web
+- **Difficulty:** _
+- **Author:** _
+- **Description**: _
+- **Resource**: _
+
 
 ![image](https://hackmd.io/_uploads/S1omJ7XAex.png)
 
 
 # 🛰️Recon
+
 ## Tổng quan chung: 
+
 Challenge bao gồm 2 ứng dụng web với:
 - app1 là ứng dụng web Python cho phép đăng kí, đăng nhập, và upload file zip, ứng dụng được expose với port 8080
 - app2 là ứng dụng web Php phục vụ cho việc giải nén là lưu trữ các file vừa upload, ứng dụng không thể truy cập từ bên ngoài mà chỉ có thể thông qua app1 hoặc từ bên trong
 
 ## Chi tiết
+
 ### App1
 Ứng dụng bao gồm các endpoint sau (bỏ qua một số chi tiết không quan trọng):
 - POST `/gateway/user` : cho phép người đăng kí với các trường username, password

@@ -18,7 +18,7 @@ theme = "PaperMod"
     disableScrollToTop = false
     disableInlineCSS = false
     disableHomeIcon = false
-    # Cấu hình trang chủ/list
+    
     homeInfoParams.Title = "HaiNhat"
     homeInfoParams.Content = "Đây là blog cá nhân của tôi, nơi tôi chia sẻ về ...!"
 

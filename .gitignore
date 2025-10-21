@@ -1,1 +1,9 @@
 readme.md
+
+/public/
+.hugo_build.lock
+
+/resources/_gen/
+/resources/_cache/
+.DS_Store
+Thumbs.db

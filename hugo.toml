@@ -1,4 +1,4 @@
-baseURL = "https://<TÊN-NGƯỜI-DÙNG-CỦA-BẠN>.github.io/my-blog-papermod/" # Rất quan trọng! Thay thế bằng URL GitHub Pages của bạn
+baseURL = "https://HaiNhat-HUST.github.io/"
 languageCode = "vi-vn"
 title = "Blog Của Tôi"
 theme = "PaperMod"

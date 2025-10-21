@@ -1,32 +1,37 @@
-name: GitHub Pages
+name: Deploy Hugo Site to GitHub Pages
 
 on:
   push:
     branches:
       - main # Kích hoạt khi có commit mới vào nhánh main
+  # Cho phép chạy thủ công từ tab Actions
+  workflow_dispatch: 
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v4
         with:
-          submodules: true  # Tải theme PaperMod
-          fetch-depth: 0    # Lịch sử Git đầy đủ cho các bản phát hành
+          submodules: true 
+          fetch-depth: 0    
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
-          extended: true
+          extended: true 
 
-      - name: Build
+      - name: Build Hugo Site
         run: hugo --minify
 
-      - name: Deploy
+      - name: Deploy to gh-pages Branch
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public # Thư mục Hugo đã biên dịch
-          publish_branch: gh-pages # Triển khai lên nhánh này
+          publish_branch: gh-pages 
+          publish_dir: ./public 
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'

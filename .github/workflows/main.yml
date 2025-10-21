@@ -3,8 +3,7 @@ name: Deploy Hugo Site to GitHub Pages
 on:
   push:
     branches:
-      - main # Kích hoạt khi có commit mới vào nhánh main
-  # Cho phép chạy thủ công từ tab Actions
+      - main 
   workflow_dispatch: 
 
 jobs:

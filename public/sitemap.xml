@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/my-blog-papermod/</loc>
+    <lastmod>2025-10-21T00:20:16+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-blog-papermod/posts/cscv_2025/</loc>
+    <lastmod>2025-10-21T00:20:16+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-blog-papermod/posts/</loc>
+    <lastmod>2025-10-21T00:20:16+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-blog-papermod/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/my-blog-papermod/tags/</loc>
+  </url>
+</urlset>

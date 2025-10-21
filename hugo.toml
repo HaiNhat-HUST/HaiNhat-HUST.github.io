@@ -1,0 +1,35 @@
+baseURL = "https://<TÊN-NGƯỜI-DÙNG-CỦA-BẠN>.github.io/my-blog-papermod/" # Rất quan trọng! Thay thế bằng URL GitHub Pages của bạn
+languageCode = "vi-vn"
+title = "Blog Của Tôi"
+theme = "PaperMod"
+
+# Cấu hình Theme PaperMod
+[params]
+    env = "production"
+    defaultTheme = "auto"
+    disableThemeToggle = false
+    ShowReadingTime = true
+    ShowShareButtons = false
+    ShowPostNavLinks = true
+    ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    ShowToc = true
+    disableSpecial1stPost = false
+    disableScrollToTop = false
+    disableInlineCSS = false
+    disableHomeIcon = false
+    # Cấu hình trang chủ/list
+    homeInfoParams.Title = "HaiNhat"
+    homeInfoParams.Content = "Đây là blog cá nhân của tôi, nơi tôi chia sẻ về ...!"
+
+# Cấu hình Menu
+[menu]
+    [[menu.main]]
+        identifier = "archives"
+        name = "Lưu trữ"
+        url = "/archives/"
+        weight = 10
+
+# Cấu hình ngôn ngữ cho theme
+[outputs]
+    home = [ "HTML", "RSS", "JSON" ]

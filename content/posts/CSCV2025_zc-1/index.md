@@ -1,6 +1,6 @@
 
 +++
-date = '2025-10-21T09:59:34+07:00'
+date = '2025-10-20'
 draft = false
 title = 'CSCV2025 | Web | ZC-1'
 +++
